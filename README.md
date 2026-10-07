@@ -4,7 +4,7 @@
 
 | 순서 | 강의 | 실습 폴더 | 설명 자료 |
 | --- | --- | --- | --- |
-| 01 | PID control | [lessons/01-pid](lessons/01-pid/README.md) | [MERO 교육 자료](https://mero-website-one.vercel.app/education/control-theory/pid-control) · 사이트 회원 로그인 필요 |
+| 01 | PID control | [lessons/01-pid](lessons/01-pid/README.md) | [MERO 교육 자료](https://mero-website-one.vercel.app/education/control-theory/pid-control) |
 
 ## 시작하기
 
@@ -13,7 +13,7 @@ git clone https://github.com/merosnurobotics/meroedu-control.git
 cd meroedu-control/lessons/01-pid
 ```
 
-강의 폴더의 README를 따라갑니다. 웹사이트 강의는 회원 전용이며 이 코드 저장소는 공개입니다.
+강의 폴더의 README를 따라갑니다. 웹사이트 강의와 이 코드 저장소는 모두 공개입니다.
 
 ## 새 강의 추가
 

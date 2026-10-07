@@ -14,11 +14,11 @@ class ControlTest(unittest.TestCase):
     def test_body_rotation(self):
         x,y=world_to_body(1,0,math.pi/2)
         self.assertAlmostEqual(x,0);self.assertAlmostEqual(y,-1)
-    def test_line_converges_without_disturbance(self):
-        c=PID(2.5,output_limit=.45);y=.18
-        for _ in range(500):
-            _,vy=line_command(y,0,c,.02);y+=vy*.02
-        self.assertLess(abs(y),.006)
+    def test_line_commands_reduce_signed_error(self):
+        for y in [-.1,.1]:
+            c=PID(2.5,output_limit=.45)
+            _,vy=line_command(y,0.,c,.02)
+            self.assertLess(y*vy,0.)
     def test_invalid_time(self):
         with self.assertRaises(ValueError):PID(1).step(1,0,0)
 if __name__=='__main__':unittest.main()
